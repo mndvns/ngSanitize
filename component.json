@@ -2,7 +2,7 @@
   "name": "ngSanitize",
   "repo": "mndvns/ngSanitize",
   "description": "ngSanitize module for Angular",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "keywords": ["angular", "sanitize"],
   "dependencies": {
     "camshaft/component-angular": "^1.2.7"
