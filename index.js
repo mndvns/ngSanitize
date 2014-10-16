@@ -2,15 +2,13 @@
  * Module dependencies.
  */
 
-require('angular');
+var angular = window.angular || require('component-angular');
 
 /**
  * @license AngularJS v1.2.7
  * (c) 2010-2014 Google, Inc. http://angularjs.org
  * License: MIT
  */
-
-(function(window, angular, undefined) {'use strict';
 
 var $sanitizeMinErr = angular.$$minErr('$sanitize');
 
@@ -475,7 +473,8 @@ function htmlSanitizeWriter(buf, uriValidator){
 
 
 // define ngSanitize module and register $sanitize service
-angular.module('ngSanitize', []).provider('$sanitize', $SanitizeProvider);
+var output = angular.module('ngSanitize', []);
+output.provider('$sanitize', $SanitizeProvider);
 
 /* global sanitizeText: false */
 
@@ -577,7 +576,7 @@ angular.module('ngSanitize', []).provider('$sanitize', $SanitizeProvider);
      </doc:scenario>
    </doc:example>
  */
-angular.module('ngSanitize').filter('linky', ['$sanitize', function($sanitize) {
+output.filter('linky', ['$sanitize', function($sanitize) {
   var LINKY_URL_REGEXP =
         /((ftp|https?):\/\/|(mailto:)?[A-Za-z0-9._%+-]+@)\S*[^\s.;,(){}<>]/,
       MAILTO_REGEXP = /^mailto:/;
@@ -625,5 +624,4 @@ angular.module('ngSanitize').filter('linky', ['$sanitize', function($sanitize) {
   };
 }]);
 
-
-})(window, window.angular);
+exports = module.exports = output;
