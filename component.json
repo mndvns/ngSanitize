@@ -1,15 +1,13 @@
 {
   "name": "ng-sanitize",
-  "repo": "mvanasse/ng-sanitize",
+  "repo": "mndvns/ng-sanitize",
   "description": "ngSanitize module for Angular",
-  "version": "1.0.7",
-  "keywords": [],
+  "version": "1.2.7",
+  "keywords": ["angular", "sanitize"],
   "dependencies": {
-    "CamShaft/component-angular": "*"
+    "camshaft/component-angular": "^1.2.7"
   },
   "development": {},
-  "paths": ["components-local"],
-  "local": [],
   "license": "MIT",
   "main": "index.js",
   "scripts": [
